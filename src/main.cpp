@@ -10,6 +10,8 @@
 #include "header/shader.h"
 #include "header/stb_image.h"
 
+#include <fstream>
+
 void framebufferSizeCallback(GLFWwindow *window, int width, int height);
 void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods);
 unsigned int loadCubemap(std::vector<string> &mFileName);
@@ -51,7 +53,7 @@ unsigned int cubemapVAO, cubemapVBO;
 
 // shader programs 
 int alienProgramIndex = 0;
-int ufoProgramIndex = 0;
+int ufoProgramIndex = 1;
 
 std::vector<shader_program_t*> shaderPrograms;
 shader_program_t* cubemapShader;
@@ -96,8 +98,8 @@ void light_setup(){
 void material_setup(){
     material.ambient = glm::vec3(1.0);
     material.diffuse = glm::vec3(1.0);
-    material.specular = glm::vec3(0.7);
-    material.gloss = 10.5;
+    material.specular = glm::vec3(1.0);
+    material.gloss = 32.0;
 }
 //////////////////////////////////////////////////////////////////////////
 
@@ -153,7 +155,9 @@ void shader_setup(){
         shader_program_t* shaderProgram = new shader_program_t();
         shaderProgram->create();
         shaderProgram->add_shader(vpath, GL_VERTEX_SHADER);
-        shaderProgram->add_shader(gpath, GL_GEOMETRY_SHADER);
+        if(std::ifstream(gpath)){
+            shaderProgram->add_shader(gpath, GL_GEOMETRY_SHADER);
+        }
         shaderProgram->add_shader(fpath, GL_FRAGMENT_SHADER);
         shaderProgram->link_shader();
         shaderPrograms.push_back(shaderProgram);
@@ -259,7 +263,7 @@ void update(){
         alienModel = glm::translate(alienModel, ufo.position);
 
         if(!alienStay){
-            alienRotationAngle += glm::radians(2.0f);
+            alienRotationAngle += glm::radians(1.0f);
             if (alienRotationAngle > glm::two_pi<float>()) {
                 alienRotationAngle -= glm::two_pi<float>(); 
             }
@@ -275,7 +279,7 @@ void update(){
     
     // rotate the ufo
     static float ufoRotationAngle = 0.0f; 
-    ufoRotationAngle += glm::radians(1.0f);
+    ufoRotationAngle += glm::radians(2.0f);
     if (ufoRotationAngle > glm::two_pi<float>()) {
         ufoRotationAngle -= glm::two_pi<float>(); 
     }
@@ -291,7 +295,7 @@ void update(){
     cameraModel = glm::rotate(cameraModel, glm::radians(camera.rotationY), camera.up);
     cameraModel = glm::translate(cameraModel, camera.position);
 
-    increase += 0.05;
+    increase += 0.04;
     explode = explode + increase;
 }
 
@@ -334,7 +338,7 @@ void render(){
         }
     }
 
-    // 渲染 UFO
+    // render UFO
     shaderPrograms[ufoProgramIndex]->use();
     shaderPrograms[ufoProgramIndex]->set_uniform_value("model", ufoModel);
     shaderPrograms[ufoProgramIndex]->set_uniform_value("view", view);

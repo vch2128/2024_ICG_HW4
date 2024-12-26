@@ -11,7 +11,7 @@ out vec3 gNormal;
 out vec2 gTexCoord;
 
 uniform float time;
-float inflateAmount = sin(time) * 0.2f;
+float inflateAmount = sin(time*3.0) * 0.2f;
 
 void main() {
     for (int i = 0; i < 3; ++i) {

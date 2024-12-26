@@ -27,7 +27,7 @@ void main()
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0);
 
     vec3 lightColor = vec3(1.0, 1.0, 1.0);
-    vec3 result = (0.3 + diff + spec) * lightColor;
+    vec3 result = (1.0 + diff + spec) * lightColor;
 
     vec4 texColor = texture(ourTexture, gTexCoord);
     FragColor = vec4(texColor.rgb * result, texColor.a);
