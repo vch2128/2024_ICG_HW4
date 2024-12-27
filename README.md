@@ -33,6 +33,8 @@ UFO is on the left hand side, out of the viewing window. Rotate camera(`D`) or m
 
 Alien is not showing. Press `I` to show it.
 
+<br>
+
 ### Available Operations
 1. Camera
 
