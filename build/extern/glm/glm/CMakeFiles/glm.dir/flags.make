@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/vch2128/Desktop/icg_hw4/extern/glm
 
-CXX_FLAGS = -g -std=c++14
+CXX_FLAGS = -std=c++14
 

@@ -464,8 +464,8 @@ void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods
     if (key == GLFW_KEY_6 && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
         show_alien = true;
         alienStay = true;  // alien stop rotating
-        alienProgramIndex = 4;   // noise
-        ufoProgramIndex = 6;   // split
+        alienProgramIndex = 4;   // split
+        ufoProgramIndex = 6;   // noise
     }
     if (key == GLFW_KEY_7 && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
         show_alien = true;
@@ -494,6 +494,8 @@ void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods
     // alien rotate around UFO
     if (key == GLFW_KEY_K && (action == GLFW_REPEAT || action == GLFW_PRESS))
         alienRotate = !alienRotate;
+    if (key == GLFW_KEY_I && (action == GLFW_REPEAT || action == GLFW_PRESS))
+        show_alien = !show_alien;
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes

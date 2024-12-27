@@ -1,2 +1,2 @@
-/usr/bin/aarch64-linux-gnu-ar qc libglm.a CMakeFiles/glm.dir/detail/glm.cpp.o
-/usr/bin/aarch64-linux-gnu-ranlib libglm.a
+/usr/bin/ar qc libglm.a CMakeFiles/glm.dir/detail/glm.cpp.o
+/usr/bin/ranlib libglm.a
