@@ -25,13 +25,12 @@ void main()
     vec4 surfaceNormal = vec4(normalize(cross(vector0, vector1)), 0.0f);
 
     float start = 0.0;
+    if(explode > 30){
+       start = explode - 20;
+    }
 
     for (int i = 0; i < 3; ++i)
     {
-        if(explode > 30){
-            start = explode - 20;
-        }
-
         // start pos
         gl_Position = data_in[i].projection * (gl_in[i].gl_Position + start * surfaceNormal);
         blastColor = getExplosionColor(start);
