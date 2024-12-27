@@ -13,7 +13,8 @@ in DATA
 uniform float explode;
 
 vec4 getExplosionColor(float distance) {
-    vec3 color = mix(vec3(1.0, 0.5, 0.1), vec3(0.1, 0.1, 0.1), distance / 30);
+    float ratio = min(distance / 30, 1.0);
+    vec3 color = mix(vec3(1.0, 0.5, 0.1), vec3(0.1, 0.1, 0.1), ratio);
 
     return vec4(color, 1.0);
 }
