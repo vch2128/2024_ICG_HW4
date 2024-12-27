@@ -41,7 +41,8 @@ void main()
         gl_Position = data_in[i].projection * (gl_in[i].gl_Position + explode * surfaceNormal);
         blastColor = getExplosionColor(explode);
         EmitVertex();
+
+        EndPrimitive();
     }
-    EndPrimitive();
 }
 

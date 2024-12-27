@@ -2,9 +2,11 @@
 layout (triangles) in;
 layout (triangle_strip, max_vertices = 6) out;
 
-in vec3 vFragPos[];
-in vec3 vNormal[]; 
-in vec2 vTexCoord[];
+in DATA {
+    vec3 FragPos;
+    vec3 Normal;
+    vec2 TexCoord;
+} gs_in;
 
 out vec3 gFragPos;
 out vec3 gNormal;
@@ -15,11 +17,11 @@ float inflateAmount = sin(time*3.0) * 0.2f;
 
 void main() {
     for (int i = 0; i < 3; ++i) {
-        vec3 inflatedPosition = vFragPos[i] + vNormal[i] * inflateAmount;
+        vec3 inflatedPosition = gs_in.FragPos[i] + gs_in.Normal[i] * inflateAmount;
         gFragPos = inflatedPosition;
-        gNormal = vNormal[i];
-        gTexCoord = vTexCoord[i]; 
-        gl_Position = gl_in[i].gl_Position + vec4(vNormal[i] * inflateAmount, 0.0);
+        gNormal = gs_in.Normal[i];
+        gTexCoord = gs_in.TexCoord[i]; 
+        gl_Position = gl_in[i].gl_Position + vec4(gs_in.Normal[i] * inflateAmount, 0.0);
         EmitVertex();
     }
     EndPrimitive();
