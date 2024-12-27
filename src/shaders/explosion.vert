@@ -5,8 +5,6 @@ layout (location = 2) in vec2 aTexCoord;
 
 out DATA
 {
-    vec3 Normal;
-	vec2 texCoord;
     mat4 projection;
 } data_out;
 
@@ -18,7 +16,5 @@ void main()
 {
 	gl_Position = view * model * vec4(aPos, 1.0);
 
-	data_out.Normal = aNormal;
-	data_out.texCoord = aTexCoord;
 	data_out.projection = projection;
 }

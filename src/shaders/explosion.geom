@@ -3,13 +3,10 @@
 layout (triangles) in;
 layout (line_strip, max_vertices = 6) out;
 
-out vec2 TexCoord;
 out vec4 blastColor;
 
 in DATA
 {
-    vec3 Normal;
-	vec2 texCoord;
     mat4 projection;
 } data_in[];
 
@@ -37,13 +34,11 @@ void main()
 
         // start pos
         gl_Position = data_in[i].projection * (gl_in[i].gl_Position + start * surfaceNormal);
-        TexCoord = data_in[i].texCoord;
         blastColor = getExplosionColor(start);
         EmitVertex();
 
         // explode pos
         gl_Position = data_in[i].projection * (gl_in[i].gl_Position + explode * surfaceNormal);
-        TexCoord = data_in[i].texCoord;
         blastColor = getExplosionColor(explode);
         EmitVertex();
     }
