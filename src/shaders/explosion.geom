@@ -1,7 +1,6 @@
 #version 330 core
 
 layout (triangles) in;
-//layout (triangle_strip, max_vertices = 3) out;
 layout (line_strip, max_vertices = 6) out;
 
 out vec2 TexCoord;
@@ -50,7 +49,5 @@ void main()
 
         EndPrimitive();
     }
-
-    //EndPrimitive();
 }
 
