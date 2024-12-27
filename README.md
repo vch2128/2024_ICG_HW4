@@ -3,7 +3,7 @@
 ## Environment Set-up
 1. Follow the instructions in `Environment Setup Guide.pdf`
 
-
+<br>
 
 ## Install Instructions
 1. Clone repository
@@ -25,11 +25,11 @@ cd build
 cmake ..
 ```
 
-
+<br>
 
 ## Operation Instructions
 ### Original Settings
-UFO is at the left hand side, out of the viewing window. Rotate camera(`D`) or move UFO right(`L`) to see it.
+UFO is on the left hand side, out of the viewing window. Rotate camera(`D`) or move UFO right(`L`) to see it.
 
 Alien is not showing. Press `I` to show it.
 
