@@ -4,6 +4,7 @@
 1. Follow the instructions in `Environment Setup Guide.pdf`
 
 
+
 ## Install Instructions
 1. Clone repository
 ```
@@ -25,6 +26,7 @@ cmake ..
 ```
 
 
+
 ## Operation Instructions
 ### Original Settings
 UFO is at the left hand side, out of the viewing window. Rotate camera(`D`) or move UFO right(`L`) to see it.
@@ -33,6 +35,7 @@ Alien is not showing. Press `I` to show it.
 
 ### Available Operations
 1. Camera
+
 `A`: Rotate left
 
 `D`: Rotate right
@@ -43,18 +46,21 @@ Alien is not showing. Press `I` to show it.
 
 
 2. UFO
+
 `J`: Move left
 
 `L`: Move right
 
 
 3. Alien
+
 `I`: Show alien
 
 `K`: Alien rotate around UFO
 
 
 4. Effects
+
 `1`: Alien: not showing, UFO: grow effect
 
 `2`: Alien: not showing, UFO: alert effect
