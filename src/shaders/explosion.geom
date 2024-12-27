@@ -46,8 +46,7 @@ void main()
         TexCoord = data_in[i].texCoord;
         blastColor = getExplosionColor(explode);
         EmitVertex();
-
-        EndPrimitive();
     }
+    EndPrimitive();
 }
 
