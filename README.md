@@ -1,5 +1,8 @@
 # ICG HW4
 
+## Envioronment Set-up
+1. Follow the instructions in `Environment Setup Guide.pdf`
+
 ## Install Instructions
 1. Clone repository
 ```
