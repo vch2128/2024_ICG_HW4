@@ -44,6 +44,7 @@ Alien is not showing. Press `I` to show it.
 
 `S`: Zoom out
 
+<br>
 
 2. UFO
 
@@ -51,6 +52,7 @@ Alien is not showing. Press `I` to show it.
 
 `L`: Move right
 
+<br>
 
 3. Alien
 
@@ -58,6 +60,7 @@ Alien is not showing. Press `I` to show it.
 
 `K`: Alien rotate around UFO
 
+<br>
 
 4. Effects
 
