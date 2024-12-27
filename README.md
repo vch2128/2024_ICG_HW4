@@ -12,7 +12,7 @@ git clone https://github.com/vch2128/2024_ICG_HW4
 ```
 2. Re-install glm
 ```
-cd 2024_ICG_HW4
+cd 2024_ICG_HW4/extern
 rmdir glm
 git clone https://github.com/g-truc/glm.git
 ```
