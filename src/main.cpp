@@ -446,7 +446,7 @@ void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods
     }
     if (key == GLFW_KEY_3 && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
         show_alien = true;
-        alienProgramIndex = 1;  // gouraud
+        alienProgramIndex = 8;  // gouraud
         alien.position = ufo.position + glm::vec3(-180.0f, 0.0f, 0.0f);
         ufoProgramIndex = 2;  // alert
     }
