@@ -16,7 +16,14 @@ cd 2024_ICG_HW4/extern
 rmdir glm
 git clone https://github.com/g-truc/glm.git
 ```
-3. Run project
+3. Re-build the project
+```
+cd ..
+rm -rf build
+mkdir build
+cd build
+cmake ..
+```
 
 <br>
 
