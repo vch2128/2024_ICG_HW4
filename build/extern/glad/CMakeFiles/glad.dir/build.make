@@ -73,15 +73,15 @@ extern/glad/CMakeFiles/glad.dir/src/glad.c.o: extern/glad/CMakeFiles/glad.dir/fl
 extern/glad/CMakeFiles/glad.dir/src/glad.c.o: ../extern/glad/src/glad.c
 extern/glad/CMakeFiles/glad.dir/src/glad.c.o: extern/glad/CMakeFiles/glad.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vch2128/Desktop/icg_hw4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object extern/glad/CMakeFiles/glad.dir/src/glad.c.o"
-	cd /home/vch2128/Desktop/icg_hw4/build/extern/glad && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT extern/glad/CMakeFiles/glad.dir/src/glad.c.o -MF CMakeFiles/glad.dir/src/glad.c.o.d -o CMakeFiles/glad.dir/src/glad.c.o -c /home/vch2128/Desktop/icg_hw4/extern/glad/src/glad.c
+	cd /home/vch2128/Desktop/icg_hw4/build/extern/glad && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT extern/glad/CMakeFiles/glad.dir/src/glad.c.o -MF CMakeFiles/glad.dir/src/glad.c.o.d -o CMakeFiles/glad.dir/src/glad.c.o -c /home/vch2128/Desktop/icg_hw4/extern/glad/src/glad.c
 
 extern/glad/CMakeFiles/glad.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/glad.dir/src/glad.c.i"
-	cd /home/vch2128/Desktop/icg_hw4/build/extern/glad && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vch2128/Desktop/icg_hw4/extern/glad/src/glad.c > CMakeFiles/glad.dir/src/glad.c.i
+	cd /home/vch2128/Desktop/icg_hw4/build/extern/glad && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vch2128/Desktop/icg_hw4/extern/glad/src/glad.c > CMakeFiles/glad.dir/src/glad.c.i
 
 extern/glad/CMakeFiles/glad.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/glad.dir/src/glad.c.s"
-	cd /home/vch2128/Desktop/icg_hw4/build/extern/glad && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vch2128/Desktop/icg_hw4/extern/glad/src/glad.c -o CMakeFiles/glad.dir/src/glad.c.s
+	cd /home/vch2128/Desktop/icg_hw4/build/extern/glad && /usr/bin/aarch64-linux-gnu-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vch2128/Desktop/icg_hw4/extern/glad/src/glad.c -o CMakeFiles/glad.dir/src/glad.c.s
 
 # Object files for target glad
 glad_OBJECTS = \
