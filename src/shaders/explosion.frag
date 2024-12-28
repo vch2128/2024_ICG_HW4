@@ -5,7 +5,6 @@ in vec4 blastColor;
 
 uniform sampler2D ourTexture;
 
-
 void main()
 {
     FragColor = blastColor;

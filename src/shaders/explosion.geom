@@ -5,12 +5,8 @@ layout (line_strip, max_vertices = 6) out;
 
 out vec4 blastColor;
 
-in DATA
-{
-    mat4 projection;
-} data_in[];
-
 uniform float explode;
+uniform mat4 projection;
 
 vec4 getExplosionColor(float distance) {
     float ratio = min(distance / 30, 1.0);
@@ -33,12 +29,12 @@ void main()
     for (int i = 0; i < 3; ++i)
     {
         // start pos
-        gl_Position = data_in[i].projection * (gl_in[i].gl_Position + start * surfaceNormal);
+        gl_Position = projection * (gl_in[i].gl_Position + start * surfaceNormal);
         blastColor = getExplosionColor(start);
         EmitVertex();
 
         // explode pos
-        gl_Position = data_in[i].projection * (gl_in[i].gl_Position + explode * surfaceNormal);
+        gl_Position = projection * (gl_in[i].gl_Position + explode * surfaceNormal);
         blastColor = getExplosionColor(explode);
         EmitVertex();
 
