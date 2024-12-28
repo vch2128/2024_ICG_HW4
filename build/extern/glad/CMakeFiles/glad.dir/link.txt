@@ -1,2 +1,0 @@
-/usr/bin/aarch64-linux-gnu-ar qc libglad.a CMakeFiles/glad.dir/src/glad.c.o
-/usr/bin/aarch64-linux-gnu-ranlib libglad.a
