@@ -1,6 +1,6 @@
 #version 330 core
 layout (triangles) in;
-layout (triangle_strip, max_vertices = 6) out;
+layout (triangle_strip, max_vertices = 3) out;
 
 in vec3 vFragPos[];
 in vec3 vNormal[]; 

@@ -144,7 +144,7 @@ void shader_setup(){
 #endif
 
     std::vector<std::string> shadingMethod = {
-        "default", "gouraud", "alert", "fur", "split", "vanish", "noise", "explosion", "grow"
+        "default", "gouraud", "alert", "fur", "split", "grow", "noise", "explosion"
     };
 
     for(int i=0; i<shadingMethod.size(); i++){
@@ -438,7 +438,7 @@ void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods
     }
     if (key == GLFW_KEY_1 && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
         show_alien = false;
-        ufoProgramIndex = 5;  // vanish
+        ufoProgramIndex = 5;  // grow
     }
     if (key == GLFW_KEY_2 && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
         show_alien = false;
@@ -446,7 +446,7 @@ void keyCallback(GLFWwindow *window, int key, int scancode, int action, int mods
     }
     if (key == GLFW_KEY_3 && (action == GLFW_REPEAT || action == GLFW_PRESS)) {
         show_alien = true;
-        alienProgramIndex = 8;  // gouraud
+        alienProgramIndex = 1;  // gouraud
         alien.position = ufo.position + glm::vec3(-180.0f, 0.0f, 0.0f);
         ufoProgramIndex = 2;  // alert
     }
